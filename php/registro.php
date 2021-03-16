@@ -30,7 +30,7 @@
 			</div>
 
 		<!-- Formulario -->
-		<form action="registro.php" method="post" class="formulario" id="formulario">
+		<form action="validar.php" method="post" class="formulario" id="formulario">
 			
 			<!-- Usuario -->
 			<div class="formulario__grupo" id="grupo__usuario">
@@ -39,7 +39,7 @@
 					<input type="text" id="usuario" class="formulario__input rounded" name="usuario">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i> <!-- icono -->
 				</div>
-				<p class="formulario__input-error">El usario debe contener de 4 a 16 dígitos. Solo puede contener números, letras y guion bajo</p>
+				<p class="formulario__input-error">El usario debe contener de 5 a 16 dígitos. Solo puede contener números, letras y guion bajo</p>
 			</div>		
 			<!-- Correo -->
 			<div class="formulario__grupo" id="grupo__correo">
@@ -89,13 +89,12 @@
 				<button type="submit" class="formulario__btn btn rounded">Crear usuario</button>
 				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente</p>
 			</div>
-						
-					
+								
 		</form>
 	</header>
-
-	<!-- Scripts -->
-	<script src="../Js/validacion_registro.js"></script>
+	<!-- Script -->
+	<script src="../Js/validacionRegistro.js"></script> 
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Css Style -->
-    <link rel="stylesheet" href="../css/styleLogin.css">
+    <link rel="stylesheet" href="../css/style_login.css">
 	
 </head>
 <body>
@@ -42,26 +42,23 @@
 					<li class="lista display-5 text-uppercase font-weight-bold text-left mt-1">Valor de la Información</li>
 					<li class="lista display-5 text-uppercase font-weight-bold text-left mt-1">Visualización</li>
 				</ul>
-				<!--<img src="../img/descarga.jpg" alt="messi" class="img_1">-->
+				
 			</div>
 			<div class="col-sm-6 text-center">
 				<p class="p2">Ingresa tu usuario y contraseña</p>
 				
-				 <?php if(!empty($message)): ?>
-      				<p> <?= $message ?></p>
-    			<?php endif; ?>
-
-				<form action="login.php" method="POST">
+				<form action="validarLogin.php" method="POST">
 					 
 						<!-- if(isset($_GET['error']) && $_GET['error']==true){
 						print("<h4>Error: Nombre de usuario o contraseña invalidos</h4>");
 						}  -->
 					
-					<input type="text" class="ingreso_datos form-control rounded-0 my-4 text-left" name="user" placeholder="Nombre de Usuario">
+					<input type="text" class="ingreso_datos form-control rounded-0 my-4 text-left" name="usuario" placeholder="Nombre de Usuario">
 
-					<input type="password" class="ingreso_datos form-control rounded-0 my-4 text-left" name="clave" placeholder="Contraseña">
+					<input type="password" class="ingreso_datos form-control rounded-0 my-4 text-left" name="password" placeholder="Contraseña">
 					
-					 <input type="submit" value="Ingresar" class="btn-ingresar font-weight-bold rounded"><br><br> <!-- Boton de Ingreso -->
+					<!-- Boton de Ingreso -->
+					 <input type="submit" value="Ingresar" class="btn-ingresar font-weight-bold rounded"><br><br> 
 				</form>
 
 				<button class="btn rounded">
