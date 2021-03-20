@@ -1,10 +1,12 @@
 <?php
 
+//Conexion a la base de datos
+// $conexion = mysqli_connect("localhost", "root", "", "FullStack");
+include('conexion.php');
+
 $usuario = $_POST["usuario"];
 $password = $_POST["password"];
 
-//Conexion a la base de datos
-$conexion = mysqli_connect("localhost", "root", "", "FullStack");
 $consulta = "SELECT * FROM ID_Loging WHERE usuario ='$usuario' and password='$password'";
 
 //Ejecución de la consulta
@@ -12,8 +14,9 @@ $resultado =mysqli_query($conexion, $consulta);
 
 //Si al momento de ejecutar la consulta, a coincidido, dará un resultado, y entrgará un 1 ó 0
 $filas = mysqli_num_rows($resultado);  
-$mensaje = '';
+//$mensaje = '';
 if($filas > 0){
+	$_SESSION['id_ususario'] = $filas["id"];
 	header("location:home.php");
 }
 

@@ -1,14 +1,32 @@
-
+//console.log('funcionando');
 //--- Se extrae el Formulario --- //
 
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input'); // se tiene arreglo de los inputs 
 
+let usuario = document.getElementById('usuario');
+let correo = document.getElementById('correo');
+let password = document.getElementById('password');
+
+// ------ Función de conexion con Php ----- //
+function data(){
+    let datos = new FormData();
+    datos.append("usuario", usuario.value);
+    datos.append("password", password.value);
+    fetch('../php/newvalidacion.php',{
+        method: 'POST',
+        body: datos
+     }).then(Response, Response.json())
+    .then(datoss =>{
+        console.log(datoss)
+    });    
+}
+
 // --- Objeto con Expresiones regulares --- //
 
 const expresiones = {
-    usuario: /^[a-zA-Z0-9\_\-]{5,16}$/, // Letras, numeros, guion y guion_bajo
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password: /^.{5,12}$/, // 4 a 12 digitos.
 }
 
@@ -68,16 +86,16 @@ const validarFormulario = (e) => {
         case "usuario":
             validarCampo(expresiones.usuario, e.target, 'usuario');
         break;
-        
+
         case "correo":
             validarCampo(expresiones.correo, e.target, 'correo');
         break;
-        
+
         case "password":
             validarCampo(expresiones.password, e.target, 'password')
             validarPassword2()
         break;
-        
+
         case "password2":
             validarPassword2()
         break;
@@ -90,42 +108,41 @@ inputs.forEach((input) => {
 
 // --- Se agrega evento para el boton --- //
 
-const phpComunicacion = () =>{
-    $.ajax({
-        //la url en la que esté tu php
-        url  :"../php/validar.php",
-        async :true,
-        //(aquí GET o POST)
-        method :  "POST",
-        data : {
-            "usuario": campos.usuario,
-            "password" : campos.password,
-            }
-        }).done(function(response){
-            //Aquí te devuelve el OK o KO dependiendo de lo que hagas en PHP
-            //En php recibes en este caso concreto $_POST['nombreUsuario'] y $_POST['pass']
-        });
-}
+// formulario.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     //data();
+//     // console.log('diste un click');
 
-formulario.addEventListener('submit', (e) => {
-	e.preventDefault();
+//     var datos = new FormData(formulario);
 
-	const terminos = document.getElementById('terminos');
-	if(campos.usuario && campos.correo  && campos.password && terminos.checked ){
-		//phpComunicacion();
-        formulario.reset();
-        document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+//     const terminos = document.getElementById('terminos');
+//     if(campos.usuario && campos.correo  && campos.password && terminos.checked ){
+//         formulario.reset();
+//         document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
 
-		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-		}, 3000);
+//         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+//         setTimeout(() => {
+//             document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+//         }, 2000);
 
-		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-			icono.classList.remove('formulario__grupo-correcto');
-		}
-        
-	} else {
-		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-	}
-});
+//         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+//             icono.classList.remove('formulario__grupo-correcto');
+//         });
+//     } else {
+//         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+//     }
+
+//     // console.log(datos)
+//     // console.log(datos.get('usuario'))
+//     // console.log(datos.get('correo'))
+//     // console.log(datos.get('password'))
+
+//     fetch('../php/validar.php',{
+//         method: 'POST',
+//         body: datos
+//     })
+//         .then(res => res.json())
+//         // .then(data => {
+//         //     console.log(data)
+//         // })
+// }); 

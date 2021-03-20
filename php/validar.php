@@ -1,7 +1,7 @@
 <?php
 
 // Se realiza la conexión con la base de datos
-$conexion = mysqli_connect("localhost", "root", "", "FullStack");
+include('conexion.php');
 if(!$conexion){
 	echo "Error al conectar a la base de datos";
 	print("<br>");
@@ -44,6 +44,4 @@ mysqli_close($conexion);
 
 
 
-
- 
  ?>

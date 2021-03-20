@@ -11,9 +11,7 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Css Style -->    
     <link rel="stylesheet" href="../css/style_registro.css	">
-
 </head>
-
 <body>
 	<header class="container">
 		<!-- Logo -->
@@ -29,8 +27,8 @@
 				<h1 class="titulo_1 display-4 font-weight-bold mt-5">Crea tu Usuario</h1>
 			</div>
 
-		<!-- Formulario -->
-		<form action="validar.php" method="post" class="formulario" id="formulario">
+		<!---- Formulario ---->
+		<form action="validar.php" method="post" class="formulario" id="formulario" onsubmit="return validar();">
 			
 			<!-- Usuario -->
 			<div class="formulario__grupo" id="grupo__usuario">
@@ -39,7 +37,7 @@
 					<input type="text" id="usuario" class="formulario__input rounded" name="usuario">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i> <!-- icono -->
 				</div>
-				<p class="formulario__input-error">El usario debe contener de 5 a 16 dígitos. Solo puede contener números, letras y guion bajo</p>
+				<p class="formulario__input-error">El usario debe contener de 4 a 16 dígitos. Solo puede contener números, letras y guion bajo</p>
 			</div>		
 			<!-- Correo -->
 			<div class="formulario__grupo" id="grupo__correo">
@@ -70,7 +68,6 @@
 				</div>
 				<p class="formulario__input-error">Ambas contraseñas deben ser iguales</p>
 			</div>
-
 			<!-- Terminos y Condiciones -->
 			<div class="formulario__grupo" id="grupo__terminos">
 				<label for="" class="formulario__label">
@@ -78,23 +75,21 @@
 					Acepto Terminos y Condiciones
 				</label>
 			</div>
-
 			<!-- Mensaje de Warning -->
 			<div class="formulario__mensaje" id="formulario__mensaje">
 				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor complete el formulario correctamente</p>
 			</div>
-
 			<!-- Boton -->
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
 				<button type="submit" class="formulario__btn btn rounded">Crear usuario</button>
 				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente</p>
 			</div>
-								
+						
+					
 		</form>
 	</header>
-	<!-- Script -->
-	<script src="../Js/validacionRegistro.js"></script> 
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+	<!-- Scripts -->
+	<script src="../Js/newValidacion.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>

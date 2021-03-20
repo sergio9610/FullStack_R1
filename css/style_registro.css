@@ -177,4 +177,20 @@ body{
     .formulario__btn {
         width: 90%;
     }
+    /*.formulario_grupo-incorrecto{
+        width:
+    }*/
+}
+
+.registroError{
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 18px;
+    text-align: center;
+    margin-left: 730px;
+    width: 35%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f66060;
+    color: white;
+    border-radius: 3px;
 }
