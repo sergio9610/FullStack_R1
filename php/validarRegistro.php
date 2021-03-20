@@ -1,7 +1,7 @@
 <?php
 
 // Se realiza la conexión con la base de datos
-include('conexion.php');
+include ('conexion.php');
 if(!$conexion){
 	echo "Error al conectar a la base de datos";
 	print("<br>");
@@ -13,8 +13,8 @@ else{
 //Recibir los datos y almacenarlos en variables
 $usuario = $_POST["usuario"];
 $correo = $_POST["correo"];
-$password = $_POST["password"]; //encripta la clave del usuario
-echo "$usuario";
+$password = $_POST["password"];
+//$password = password_hash($_POST["password"], PASSWORD_DEFAULT); //encripta la clave del usuario
 
 //Consulta para insertar 
 $insertar = "INSERT INTO `ID_Loging`( `usuario`, `correo`, `password`) VALUES ('$usuario', '$correo', '$password')"; 

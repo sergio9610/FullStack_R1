@@ -108,41 +108,42 @@ inputs.forEach((input) => {
 
 // --- Se agrega evento para el boton --- //
 
-// formulario.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     //data();
-//     // console.log('diste un click');
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    //data();
+    // console.log('diste un click');
 
-//     var datos = new FormData(formulario);
+    var datos = new FormData(formulario);
 
-//     const terminos = document.getElementById('terminos');
-//     if(campos.usuario && campos.correo  && campos.password && terminos.checked ){
-//         formulario.reset();
-//         document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+    const terminos = document.getElementById('terminos');
+    
+    if(campos.usuario && campos.correo  && campos.password && terminos.checked ){
+        formulario.reset();
+        document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
 
-//         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-//         setTimeout(() => {
-//             document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-//         }, 2000);
+        document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+        setTimeout(() => {
+            document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+        }, 2000);
 
-//         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-//             icono.classList.remove('formulario__grupo-correcto');
-//         });
-//     } else {
-//         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-//     }
+        document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+            icono.classList.remove('formulario__grupo-correcto');
+        });
+    } else {
+        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+    }
 
-//     // console.log(datos)
-//     // console.log(datos.get('usuario'))
-//     // console.log(datos.get('correo'))
-//     // console.log(datos.get('password'))
+    // console.log(datos)
+    // console.log(datos.get('usuario'))
+    // console.log(datos.get('correo'))
+    // console.log(datos.get('password'))
 
-//     fetch('../php/validar.php',{
-//         method: 'POST',
-//         body: datos
-//     })
-//         .then(res => res.json())
-//         // .then(data => {
-//         //     console.log(data)
-//         // })
-// }); 
+    fetch('../php/validar.php',{
+        method: 'POST',
+        body: datos
+    })
+        .then(res => res.json())
+        // .then(data => {
+        //     console.log(data)
+        // })
+}); 

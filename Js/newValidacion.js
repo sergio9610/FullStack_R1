@@ -29,7 +29,7 @@ function validar(){
 		alert("El Correo es muy largo. Solo se aceptan 30 caracteres");
 		return false;
 	}
-	
+
 	else if(!expresion.test(correo)){
 		alert("El correo no es válido");
 		return false;
@@ -52,4 +52,4 @@ function validar(){
 		return false;
 	}
 
-}
+} 

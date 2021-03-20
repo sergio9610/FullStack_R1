@@ -28,7 +28,7 @@
 			</div>
 
 		<!---- Formulario ---->
-		<form action="validar.php" method="post" class="formulario" id="formulario" onsubmit="return validar();">
+		<form action="validarRegistro.php" method="post" class="formulario" id="formulario" onsubmit="return validar();">
 			
 			<!-- Usuario -->
 			<div class="formulario__grupo" id="grupo__usuario">
@@ -37,7 +37,7 @@
 					<input type="text" id="usuario" class="formulario__input rounded" name="usuario">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i> <!-- icono -->
 				</div>
-				<p class="formulario__input-error">El usario debe contener de 4 a 16 dígitos. Solo puede contener números, letras y guion bajo</p>
+				
 			</div>		
 			<!-- Correo -->
 			<div class="formulario__grupo" id="grupo__correo">
@@ -46,7 +46,6 @@
 					<input type="email" id="correo" class="formulario__input rounded" name="correo">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i> <!-- icono -->
 				</div>
-				<p class="formulario__input-error">El correo solo puede contener letras, números, guion y guion bajo</p>
 			</div>
 					
 			<!-- Contraseña -->
@@ -56,7 +55,6 @@
 					<input type="password" id="password" class="formulario__input rounded" name="password">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i> <!-- icono -->
 				</div>
-				<p class="formulario__input-error">La contraseña debe ser de 5 a 12 dígitos</p>
 			</div>
 			
 			<!-- Confirmación de Contraseña -->
@@ -66,7 +64,6 @@
 					<input type="password" id="password2" class="formulario__input rounded" name="password2">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i> <!-- icono -->
 				</div>
-				<p class="formulario__input-error">Ambas contraseñas deben ser iguales</p>
 			</div>
 			<!-- Terminos y Condiciones -->
 			<div class="formulario__grupo" id="grupo__terminos">
