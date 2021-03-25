@@ -68,15 +68,15 @@
 
 				<!--- Footer con Red Sociales --->
 				<ul class="list-unstyled list-inline my-4">	<!-- Quita el esitlo que tiene por defecto la etiqueta ul -->
-					<li class="list-inline-item"> <a href=""> <!-- El href se puede llenar con la página que se desee -->
+					<li class="list-inline-item"> <a href="https://www.facebook.com/" target="blank"> <!-- El href se puede llenar con la página que se desee -->
 							<i class="fcbk fab fa-facebook-f"></i>	<!-- Etiqueta i de icon -->
 						</a> 
 					</li>
-					<li class="list-inline-item"> <a href="https://api.whatsapp.com/send?phone=3126386300&text=%C2%BFEn%20que%20puedo%20ayudarte"> 
+					<li class="list-inline-item"> <a href="https://api.whatsapp.com/send?phone=573126386300&text=%C2%BFEn%20que%20puedo%20ayudarte" target="blank"> 
 							<i class="wht fab fa-whatsapp"></i>	<!-- Etiqueta i de icon -->
 						</a> 
 					</li>
-					<li class="list-inline-item"> <a href=""> 
+					<li class="list-inline-item"> <a href="https://www.instagram.com/?hl=es" target="blank"> 
 							<i class="fab fa-instagram"></i>	<!-- Etiqueta i de icon -->
 						</a> 
 					</li>

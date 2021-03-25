@@ -69,7 +69,8 @@
 			<div class="formulario__grupo" id="grupo__terminos">
 				<label for="" class="formulario__label">
 					<input type="checkbox" class="formulario__checkbox" name="terminos" id="terminos">
-					Acepto Terminos y Condiciones
+					<a href="terminosCondiciones.php" target="blank" title="Haz click para leer Terminos y Condiciones">Acepto Terminos y Condiciones</a>
+					<!--<p>Acepto Terminos y Condiciones</p>-->
 				</label>
 			</div>
 			<!-- Mensaje de Warning -->
