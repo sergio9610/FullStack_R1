@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Css Style -->
-    <link rel="stylesheet" href="../css/style_terminosCondiciones.css">
+    <link rel="stylesheet" href="../css/stle_Terminos.css">
 </head>
 <body>
 	<!-- Logo -->
@@ -20,14 +20,34 @@
 			<a class="navbar-brand mt-1"><img src="../img/logo.png" alt="Logo" class="logo"></a>
             </nav>
         </div> <br><br><br>
-		
-	<!-- Título Principal -->
-	<div class="titulo">
+	
+	<!-- Bloque Principal -->	
+	<div class="principal">
+		<!-- Título Principal -->
 		<h1 class="display-5 font-weight-bold mt-5">Terminos y Condiciones</h1>
-		
+		<hr class="linea" color="gray"/>
+		<!-- Politicas y Privacidad -->
+		<h3 class="display-5 font-weight-bold mt-5">Politicas y Privacidad</h3>
+		<p class="font-weight-bold">...</p>
+
+		<!-- Productos y Servicios Ofrecidos -->
+		<h3 class="display-5 font-weight-bold mt-5">Productos y Servicios Ofrecidos</h3>
+		<p class="font-weight-bold">...</p>
+
+		<!-- Violacion a Términos y Condiciones -->
+		<h3 class="display-5 font-weight-bold mt-5">Violacion a Términos y Condiciones</h3>
+		<p class="font-weight-bold">...</p><br>
+
+		<!--- Boton Entendido --->
+		<!-- <label for="" class="formulario__label">
+			<input type="submit" value="Entendido" class="btn-entendido font-weight-bold rounded">
+			<a href="registro.php" title="Haz click para volver a la página de registro"></a>
+		</label> -->
+		<input type="button" value="Entendido" class="btn-entendido font-weight-bold rounded" onclick = "closeCurrentWindow()"> 
 
 	</div>
 
-
+	<!-- Scripts -->
+	<script src="../Js/validacion_terminos.js"></script>
 </body>
 </html>
