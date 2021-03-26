@@ -72,7 +72,7 @@
 							<i class="fcbk fab fa-facebook-f"></i>	<!-- Etiqueta i de icon -->
 						</a> 
 					</li>
-					<li class="list-inline-item"> <a href="https://api.whatsapp.com/send?phone=573126386300&text=%C2%BFEn%20que%20puedo%20ayudarte" target="blank"> 
+					<li class="list-inline-item"> <a href="https://api.whatsapp.com/send?phone=573126386300&text=%C2%BFEn%20que%20puedo%20ayudarte?" target="blank"> 
 							<i class="wht fab fa-whatsapp"></i>	<!-- Etiqueta i de icon -->
 						</a> 
 					</li>
