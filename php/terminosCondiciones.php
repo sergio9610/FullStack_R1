@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Terminos y Condiciones</title>
+	<title>Términos y Condiciones</title>
 	<link rel="stylesheet" href="">
 	<!-- Bootstrap 4 CDN -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -24,10 +24,10 @@
 	<!-- Bloque Principal -->	
 	<div class="principal">
 		<!-- Título Principal -->
-		<h1 class="display-5 font-weight-bold mt-5">Terminos y Condiciones</h1>
+		<h1 class="display-5 font-weight-bold mt-5">Términos y Condiciones</h1>
 		<hr class="linea" color="gray"/>
 		<!-- Politicas y Privacidad -->
-		<h3 class="display-5 font-weight-bold mt-5">Politicas y Privacidad</h3>
+		<h3 class="display-5 font-weight-bold mt-5">Políticas y Privacidad</h3>
 		<p class="font-weight-bold">...</p>
 
 		<!-- Productos y Servicios Ofrecidos -->
@@ -35,7 +35,7 @@
 		<p class="font-weight-bold">...</p>
 
 		<!-- Violacion a Términos y Condiciones -->
-		<h3 class="display-5 font-weight-bold mt-5">Violacion a Términos y Condiciones</h3>
+		<h3 class="display-5 font-weight-bold mt-5">Violación a Términos y Condiciones</h3>
 		<p class="font-weight-bold">...</p><br>
 
 		<!--- Boton Entendido --->

@@ -2,51 +2,30 @@
 
 //Conexion a la base de datos
 // $conexion = mysqli_connect("localhost", "root", "", "FullStack");
-include('conexion.php');
+session_start();
 
-$usuario = $_POST["usuario"];
-$password = $_POST["password"];
-
-$consulta = "SELECT * FROM ID_Loging WHERE usuario ='$usuario' and password='$password'";
-
-//Ejecución de la consulta
-$resultado =mysqli_query($conexion, $consulta);
-
-//Si al momento de ejecutar la consulta, a coincidido, dará un resultado, y entrgará un 1 ó 0
-$filas = mysqli_num_rows($resultado);  
-//$mensaje = '';
-if($filas > 0){
-	$_SESSION['id_ususario'] = $filas["id"];
-	header("location:home.php");
-}
-
-else{
+  require 'database.php';
+  echo "usuario:".$_POST['usuario'];
+  if (!empty($_POST['usuario']) && !empty($_POST['password'])) {
+    $conn = conexionSQL();
+    $q = "SELECT * FROM ID_Loging WHERE usuario = '".$_POST['usuario']."'";
+    $var = $conn->query($q);
+    $results = $var->fetch_assoc();
+    
+    if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
+      header("Location: home.php");
+    }
+	else{
 	?>
 	<?php
 	include("login.php")
 	?>
-	<p class="loginError fas fa-exclamation-triangle">Error en la autentificación</p>
+	<p class="loginError fas fa-exclamation-triangle">Error en la autentificación</p><br>
 	<?php
+	}
+
 }
 
 //Se libera el resultado y se cierra la conexion
-mysqli_free_result($resultado);
-mysqli_close($conexion);
-
-// function conexionSQL(){
-// 	$server = 'localhost';
-// 	$username = 'root';
-// 	$password = '';
-// 	$database = 'FullStack';
-
-// 	$link = new mysqli($server,$username,$password,$database);
-// 	if($link->connect_error) {
-// 		$error = "Error de conexion: ".$link->connect_errno
-// 				."Mensaje: ".$link->connect_error;
-// 		die($error);
-// 	}else{
-// 		$q = "SET CHARACTER SET UTF8";
-// 		$link->query($q);
-// 		return $link;
-// 	}
-// }
+mysqli_free_result($var);
+mysqli_close($conn);
